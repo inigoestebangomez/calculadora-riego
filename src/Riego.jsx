@@ -5,7 +5,7 @@ import logoRiego from './assets/logo_riego_app.png';
 
 const CalculadorRiego = () => {
   const [frecuencia, setFrecuencia] = useState(4);
-  const [litrosTotales, setLitrosTotales] = useState();
+  const [litrosTotales, setLitrosTotales] = useState(1);
   const [numeroMacetas, setNumeroMacetas] = useState(5);
   const [tiempoRiego, setTiempoRiego] = useState(0);
   const [litrosPorRiego, setLitrosPorRiego] = useState(0);
