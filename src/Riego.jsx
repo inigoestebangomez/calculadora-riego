@@ -79,7 +79,8 @@ const CalculadorRiego = () => {
           </label>
           <input
             type="number"
-            inputMode="numeric"
+            inputMode="decimal"
+            pattern="[0-9.,]*"
             min="0"
             step="0.1"
             value={litrosTotales}
@@ -101,7 +102,7 @@ const CalculadorRiego = () => {
           </label>
           <input
             type="number"
-            inputMode="decimal"
+            inputMode="numeric"
             min="1"
             value={numeroMacetas}
             onChange={(e) => {
