@@ -58,9 +58,17 @@ const CalculadorRiego = () => {
           </label>
           <input
             type="number"
+            inputMode="numeric"
             min="1"
             value={frecuencia}
-            onChange={(e) => setFrecuencia(parseInt(e.target.value, 10) || 0)}
+             onChange={(e) => {
+                const value = e.target.value;
+                if (value === '') {
+                  setFrecuencia('');
+                } else if (/^\d+$/.test(value)) {
+                  setFrecuencia(value);
+                }
+              }}
             className="riego-input"
           />
         </div>
@@ -71,10 +79,18 @@ const CalculadorRiego = () => {
           </label>
           <input
             type="number"
+            inputMode="numeric"
             min="0"
             step="0.1"
             value={litrosTotales}
-            onChange={(e) => setLitrosTotales(parseFloat(e.target.value) || 0)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '') {
+                setLitrosTotales('');
+              } else if (/^\d*\.?\d*$/.test(value)) {
+                setLitrosTotales(value);
+              }
+            }}
             className="riego-input"
           />
         </div>
@@ -85,9 +101,18 @@ const CalculadorRiego = () => {
           </label>
           <input
             type="number"
+            inputMode="numeric"
             min="1"
             value={numeroMacetas}
-            onChange={(e) => setNumeroMacetas(parseInt(e.target.value, 10) || 0)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '') {
+                setNumeroMacetas('');
+              } else if (/^\d+$/.test(value)) {
+                setNumeroMacetas(value);
+              }
+            }}
+
             className="riego-input"
           />
         </div>
