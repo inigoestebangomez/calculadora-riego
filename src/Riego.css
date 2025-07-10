@@ -231,7 +231,7 @@
 @media (max-width: 640px) {
   .riego-container {
     margin: var(--spacing-lg);
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: var(--spacing-lg);
   }
   
