@@ -101,7 +101,7 @@ const CalculadorRiego = () => {
           </label>
           <input
             type="number"
-            inputMode="numeric"
+            inputMode="decimal"
             min="1"
             value={numeroMacetas}
             onChange={(e) => {
