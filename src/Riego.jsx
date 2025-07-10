@@ -33,7 +33,7 @@ const CalculadorRiego = () => {
     // Tiempo total de riego (todas las macetas)
     const tiempoTotal = tiempoPorMaceta * numeroMacetas;
     
-    setTiempoRiego(Math.round(tiempoTotal * 100) / 100); // Redondear a 2 decimales
+    setTiempoRiego(Math.round(tiempoTotal * 100) / 100);
     setLitrosPorRiego(Math.round(litrosDisponiblesPorRiego * 100) / 100);
   };
 
@@ -133,3 +133,5 @@ const CalculadorRiego = () => {
 };
 
 export default CalculadorRiego;
+
+//------ Iñigo Esteban Gómez https://github.com/inigoestebangomez/calculadora-riego ------//
