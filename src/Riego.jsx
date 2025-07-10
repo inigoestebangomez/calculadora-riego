@@ -132,7 +132,7 @@ const CalculadorRiego = () => {
         <div className="riego-grid">
           <div className="riego-result-item">
             <span className="riego-result-label">Duración por riego:</span>
-            <p className="riego-result-value">{formatearMinutosSegundos(tiempoRiego)} min</p>
+            <p className="riego-result-value">{formatearMinutosSegundos(tiempoRiego)}</p>
           </div>
           
           <div className="riego-result-item">
