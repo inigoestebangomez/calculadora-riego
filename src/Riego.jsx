@@ -44,6 +44,13 @@ const CalculadorRiego = () => {
 
   const litrosPorMaceta = numeroMacetas > 0 ? Math.round((litrosPorRiego / numeroMacetas) * 1000) / 1000 : 0;
 
+  // Función para formatear minutos y segundos
+  const formatearMinutosSegundos = (minutosDecimal) => {
+  const minutos = Math.floor(minutosDecimal);
+  const segundos = Math.round((minutosDecimal - minutos) * 60);
+  return `${minutos} min ${segundos} seg`;
+};
+
   return (
     <div className="riego-container">
       <img src={logoRiego} alt="Logo Calculadora de Riego" className="riego-logo" />
@@ -125,7 +132,7 @@ const CalculadorRiego = () => {
         <div className="riego-grid">
           <div className="riego-result-item">
             <span className="riego-result-label">Duración por riego:</span>
-            <p className="riego-result-value">{tiempoRiego} min</p>
+            <p className="riego-result-value">{formatearMinutosSegundos(tiempoRiego)} min</p>
           </div>
           
           <div className="riego-result-item">
@@ -139,7 +146,7 @@ const CalculadorRiego = () => {
           </div>
           
           <div className="riego-result-item">
-            <span className="riego-result-label">Caudal bomba:</span>
+            <span className="riego-result-label">Caudal de bomba:</span>
             <p className="riego-result-value">{CAUDAL_ML_POR_MINUTO} ml/min</p>
           </div>
         </div>
