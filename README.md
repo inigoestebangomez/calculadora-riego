@@ -1,6 +1,6 @@
 # Calculadora de Riego
 
-![Logo de la Calculadora de Riego](./public/riego-logo.png)
+![Logo de la Calculadora de Riego](./src/assets/logo_riego_app.png)
 
 Esta aplicación es una **calculadora de riego** desarrollada en React + Vite. Permite estimar la cantidad de agua necesaria para el riego de plantas domésticas, facilitando la gestión eficiente de recursos.
 
