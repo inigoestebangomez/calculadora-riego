@@ -5,8 +5,8 @@ import logoRiego from './assets/logo_riego_app.png';
 
 const CalculadorRiego = () => {
   const [frecuencia, setFrecuencia] = useState(4);
-  const [litrosTotales, setLitrosTotales] = useState(3.2);
-  const [numeroMacetas, setNumeroMacetas] = useState(1);
+  const [litrosTotales, setLitrosTotales] = useState();
+  const [numeroMacetas, setNumeroMacetas] = useState(5);
   const [tiempoRiego, setTiempoRiego] = useState(0);
   const [litrosPorRiego, setLitrosPorRiego] = useState(0);
   
@@ -155,7 +155,7 @@ const CalculadorRiego = () => {
       <div className="riego-summary">
         <h3 className="riego-summary-title">Resumen diario:</h3>
         <p className="riego-summary-text">
-          Regar {frecuencia} veces al día, {tiempoRiego} minutos cada vez
+          Regar {frecuencia} veces al día, {formatearMinutosSegundos(tiempoRiego)} cada vez
         </p>
         <p className="riego-summary-text">
           Total: {Math.round(tiempoRiego * frecuencia * 100) / 100} minutos de riego al día
